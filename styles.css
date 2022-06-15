@@ -4,19 +4,156 @@
   box-sizing: border-box;
 }
 
-font-family: 'Work Sans',
-sans-serif;
-
-header {
-  background-color: #a53838;
+:root {
+  --color-primary: #B00043;
+  --color-dark: #0E203B;
+  --color-light: #F0F0F0;
+  --fw-normal: 400;
+  --fw-bold: 700;
+  --fw-block: 900;
 }
 
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.125rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: .5em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.75rem;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  color: var(--color-light);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-dark);
+  border: 3px solid var(--color-dark);
+}
+
+.btn--outline {
+  border: 3px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+
+
 .logo {
-  font-family: 'Work Sans';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-
+  padding: 14px 0 0 0;
   color: #2A2733;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  list-style: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.weather {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  background-color: var(--color-dark);
+  color: #ACACAC;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .4rem;
+  letter-spacing: .5px;
+}
+
+.weather-icon {
+  padding: 0 .6rem;
+}
+
+.weather-info-box {
+  margin: 0 auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-info-top,
+.weather-info-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: .6rem 0;
+}
+
+.weather-info-top>div:nth-child(2),
+.weather-info-bottom>div:nth-child(2) {
+  color: #fff;
+  text-transform: none;
+}
+
+.middle-line {
+  height: 1.1px;
+  background-color: #bbbbbbc7;
+  width: 14rem;
+  opacity: .5;
+}
+
+/* main section */
+
+.main {
+  padding: 2rem 1rem;
+}
+
+.main--ski {
+  background-image: url(./img/skii_guy.jpg);
+}
+
+.main-title {
+  line-height: 1;
+  font-weight: var(--fw-block);
+  font-size: 2.3rem;
+  padding: 0 0 1.3rem 0;
+}
+
+.main-intro {
+  line-height: 24px;
+  font-size: .98rem;
+  padding: 0 0 1.3rem 0;
 }
