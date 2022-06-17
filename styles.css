@@ -23,6 +23,8 @@ body {
 header {
   background-color: var(--color-light);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -64,15 +66,12 @@ h3 {
   color: var(--color-light);
 }
 
-
-
 .logo {
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
-  padding: 14px 0 0 0;
-  color: #2A2733;
+  padding: 14px 0 14px 0;
 }
 
 .nav-list {
@@ -100,17 +99,18 @@ h3 {
   text-transform: uppercase;
   font-size: .9rem;
   font-weight: 700;
-  padding: .4rem;
   letter-spacing: .5px;
+  max-width: 425px;
 }
 
 .weather-icon {
-  padding: 0 .6rem;
+  padding: 1.14rem;
+  background-color: #F0F0F0;
+
 }
 
 .weather-info-box {
-  margin: 0 auto;
-  width: 15rem;
+  margin: 0 2rem 0 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -129,6 +129,7 @@ h3 {
 }
 
 .middle-line {
+  margin: 3.5px 0;
   height: 1.1px;
   background-color: #bbbbbbc7;
   width: 14rem;
@@ -138,11 +139,47 @@ h3 {
 /* main section */
 
 .main {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 10rem 1rem;
 }
 
 .main--ski {
   background-image: url(./img/skii_guy.jpg);
+  background-size: cover;
+  background-color: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(139, 172, 179, 1) 100%, rgba(139, 172, 179, 1) 100%);
+}
+
+@media screen and (min-width: 430px) {
+  .weather {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 4rem 1rem 20rem 2.7rem;
+
+  }
+
+  .hero-section {
+    max-width: 60%;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  .logo-and-nav {
+    flex-grow: 2;
+  }
+
+  .weather {
+    flex-grow: 1;
+  }
+
+  .nav-list {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
 
 .main-title {
@@ -156,4 +193,55 @@ h3 {
   line-height: 24px;
   font-size: .98rem;
   padding: 0 0 1.3rem 0;
+}
+
+@media screen and (min-width:1200px) {
+
+  .main {
+    padding: 6rem 1rem 30rem 10rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .main-intro {
+    line-height: 25.5px;
+    font-size: 1rem;
+    margin: .6rem 0;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  .logo-and-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    flex-grow: 1;
+    padding: 0 0 0 2rem;
+  }
+
+  .nav {
+    flex-grow: 2;
+  }
+
+  .nav-list {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero-section {
+    max-width: 50%;
+  }
+
+  @media screen and (min-width: 2560px) {
+    .main {
+      padding: 6rem 1rem 50rem 17rem;
+    }
+  }
 }
